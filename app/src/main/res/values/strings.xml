@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">GrapMoneyPlugin</string>
+    <string name="desc">开启自动点击的辅助功能，帮助你快速抢红包</string>
 </resources>

@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.grapmoney.plugin">
 
+
+    <uses-permission android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -25,8 +28,20 @@
             </intent-filter>
         </service>
 
+        <service android:name=".grap.RabMoneyService"></service>
+
         <service android:name=".guard.LocalService$GrayInnerService"
-            android:process="com.android.guard.service"></service>
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+            android:process="com.android.guard.service">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService"/>
+            </intent-filter>
+            <meta-data android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility"/>
+        </service>
 
 
     </application>
