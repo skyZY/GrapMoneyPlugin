@@ -5,7 +5,6 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.Build;
 import android.os.IBinder;
-import android.support.annotation.Nullable;
 
 import com.grapmoney.plugin.utils.LogUtils;
 
@@ -17,7 +16,6 @@ public class LocalService extends Service {
 
     private final static int GRAY_SERVICE_ID = 1001;
     private final static String TAG = "LocalService";
-    @Nullable
     @Override
     public IBinder onBind(Intent intent) {
         return null;
@@ -49,7 +47,6 @@ public class LocalService extends Service {
      */
     public static class GrayInnerService extends Service {
 
-        @Nullable
         @Override
         public IBinder onBind(Intent intent) {
             return null;

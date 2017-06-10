@@ -5,6 +5,6 @@
     android:accessibilityFlags="flagDefault"
     android:canRetrieveWindowContent="true"
     android:description="@string/desc"
+    android:packageNames="com.grapmoney.plugin"
     android:notificationTimeout="100" />
-
-<!-- android:packageNames="com.tencent.mm"-->
+<!--android:packageNames="com.tencent.mm"-->
